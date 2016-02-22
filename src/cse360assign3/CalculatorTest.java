@@ -1,6 +1,6 @@
 /**
  * @author Chase Lybbert
- * @version Second Version
+ * @version Final Version
  * PIN: 520
  */
 
@@ -58,7 +58,11 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() {
 		Calculator testCalculator = new Calculator();
-		assertEquals("", testCalculator.getHistory());
+		testCalculator.add(10);
+		testCalculator.divide(2);
+		testCalculator.multiply(8);
+		testCalculator.subtract(6);
+		assertEquals("0 + 10 / 2 * 8 - 6", testCalculator.getHistory());
 	}
 	
 	@Test

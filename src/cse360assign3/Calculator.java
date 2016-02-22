@@ -1,6 +1,6 @@
 /**
  * @author Chase
- * @version Second Version
+ * @version Final Version
  * PIN: 520
  * This program uses a value and makes calculations depending on which methods are called.
  */
@@ -10,12 +10,14 @@ package cse360assign3;
 public class Calculator {
 
 	private int total;
+	private String history;
 	
 	/**
 	 * Calculator object that uses the add, subtract, multiply and divide operations.
 	 */
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/**
@@ -32,6 +34,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/**
@@ -40,6 +43,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		history = history + " - " + value;
 	}
 	
 	/**
@@ -48,6 +52,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		history = history + " * " + value;
 	}
 	
 	/**
@@ -63,6 +68,7 @@ public class Calculator {
 		{
 			total = total / value;
 		}
+		history = history + " / " + value;
 	}
 	
 	/**
@@ -70,6 +76,6 @@ public class Calculator {
 	 * @return	A string of what calculations have been applied to the total.
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
