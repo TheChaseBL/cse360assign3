@@ -1,6 +1,6 @@
 /**
  * @author Chase Lybbert
- * @version First Version
+ * @version Second Version
  * PIN: 520
  */
 
@@ -20,32 +20,53 @@ public class CalculatorTest {
 	
 	@Test
 	public void testGetTotal() {
-		fail("Not yet implemented");
+		Calculator testCalculator = new Calculator();
+		assertEquals(0, testCalculator.getTotal());
 	}
 	
 	@Test
 	public void testAdd() {
-		fail("Not yet implemented");
+		Calculator testCalculator = new Calculator();
+		testCalculator.add(5);
+		assertEquals(5, testCalculator.getTotal());
 	}
 	
 	@Test
 	public void testSubtract() {
-		fail("Not yet implemented");
+		Calculator testCalculator = new Calculator();
+		testCalculator.add(5);
+		testCalculator.subtract(3);
+		assertEquals(2, testCalculator.getTotal());
 	}
 	
 	@Test
 	public void testMultiply() {
-		fail("Not yet implemented");
+		Calculator testCalculator = new Calculator();
+		testCalculator.add(5);
+		testCalculator.multiply(3);
+		assertEquals(15, testCalculator.getTotal());
 	}
 	
 	@Test
 	public void testDivide() {
-		fail("Not yet implemented");
+		Calculator testCalculator = new Calculator();
+		testCalculator.add(10);
+		testCalculator.divide(2);
+		assertEquals(5, testCalculator.getTotal());
 	}
 	
 	@Test
 	public void testGetHistory() {
-		fail("Not yet implemented");
+		Calculator testCalculator = new Calculator();
+		assertEquals("", testCalculator.getHistory());
+	}
+	
+	@Test
+	public void testDivideByZero() {
+		Calculator testCalculator = new Calculator();
+		testCalculator.add(10);
+		testCalculator.divide(0);
+		assertEquals(0, testCalculator.getTotal());
 	}
 
 }
